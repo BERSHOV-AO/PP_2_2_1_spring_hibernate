@@ -9,4 +9,6 @@ public interface CarDao {
     void add(Car car);
 
     List<Car> listCars();
+
+    public void clearCars();
 }

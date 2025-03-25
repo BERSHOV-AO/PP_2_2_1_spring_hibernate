@@ -15,7 +15,7 @@ public class Car {
     @Column(name = "series")
     private int series;
 
-    @OneToOne(mappedBy = "cars")
+    @OneToOne(mappedBy = "car")
     private User user;
 
     public Car() {
@@ -49,4 +49,5 @@ public class Car {
     public void setSeries(int series) {
         this.series = series;
     }
+
 }
