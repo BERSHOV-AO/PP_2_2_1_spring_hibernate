@@ -2,6 +2,8 @@ package hiber.model;
 
 import javax.persistence.*;
 
+import static javax.persistence.FetchType.LAZY;
+
 @Entity
 @Table(name = "users")
 public class User {
@@ -18,6 +20,10 @@ public class User {
 
    @Column(name = "email")
    private String email;
+
+   @OneToOne
+   @JoinColumn(name = "cars_id")
+   private Car cars;
 
    public User() {}
    
