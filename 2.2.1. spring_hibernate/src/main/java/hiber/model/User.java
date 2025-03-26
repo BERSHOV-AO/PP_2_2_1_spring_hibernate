@@ -4,7 +4,6 @@ import org.hibernate.annotations.Cascade;
 
 import javax.persistence.*;
 
-import static javax.persistence.FetchType.LAZY;
 import static org.hibernate.annotations.CascadeType.SAVE_UPDATE;
 
 @Entity
@@ -28,16 +27,6 @@ public class User {
     @JoinColumn(name = "car_id")
     @Cascade(SAVE_UPDATE)
     private Car car;
-
-//    @OneToOne(cascade = CascadeType.ALL)
-//    @JoinColumn(name = "car_id", referencedColumnName = "id")
-//    private Car car;
-
-
-//   @OneToOne
-//   @JoinColumn(name = "cars_id")
-//   private Car cars;
-
 
     public User() {
     }
